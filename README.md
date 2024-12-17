@@ -13,7 +13,7 @@ LibFewShot HomeWork
 https://docs.qq.com/sheet/DWFV5SnBEV2licmdj
 
 - 选择一篇小样本论文进 行复现，特殊情况自行选择近几年顶会经典的小样本学习算法（需与助教商量） 需要在
-https://github.com/RL-VIG/LibFewShot(也就是该框架下)
+https://github.com/RL-VIG/LibFewShot  (也就是该框架下)
 框架基础上完成算法复现，与论文中汇报的精度误差在2%以内，代码规范
 
 - 完成实验报告，报告内陈述：对算法的理解，算法复现的难点以及如何解决，复现结果表格，实验报告
