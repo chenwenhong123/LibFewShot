@@ -102,7 +102,7 @@ class GeneralDataset(Dataset):
         Returns:
             tuple: A tuple of (data list, label list, class-label dict)
         """
-        meta_csv = os.path.join(self.data_root, "{}.csv".format(self.mode))
+        meta_csv = self.data_root + "/{}.csv".format(self.mode)
 
         data_list = []
         label_list = []

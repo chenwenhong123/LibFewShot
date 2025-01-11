@@ -10,7 +10,9 @@ LibFewShot HomeWork
 
 # 作业要求
 - 在【腾讯文档】Lib论文选择
-https://docs.qq.com/sheet/DWFV5SnBEV2licmdj
+https://docs.qq.com/sheet/DWFV5SnBEV2licmdj 
+
+- 最后选择此篇论文 https://github.com/han-jia/unicorn-maml ， 名字为 "Task-aware Part Mining Network for Few-Shot Learning"
 
 - 选择一篇小样本论文进 行复现，特殊情况自行选择近几年顶会经典的小样本学习算法（需与助教商量） 需要在
 https://github.com/RL-VIG/LibFewShot  (也就是该框架下)

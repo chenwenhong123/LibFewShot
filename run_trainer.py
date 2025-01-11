@@ -7,15 +7,19 @@ import torch
 import os
 from core.config import Config
 from core import Trainer
+from core.model.meta import MAMLUnicorn
 
 
 def main(rank, config):
-    trainer = Trainer(rank, config)
-    trainer.train_loop(rank)
+    if config["model"]["name"] == "MAMLUnicorn":
+        model = MAMLUnicorn(**config["model"]["kwargs"])
+    else:
+        model = Trainer(rank, config)
+    model.train_loop(rank)
 
 
 if __name__ == "__main__":
-    config = Config("./config/proto.yaml").get_config_dict()
+    config = Config("./config/test_install.yaml").get_config_dict()
 
     if config["n_gpu"] > 1:
         os.environ["CUDA_VISIBLE_DEVICES"] = config["device_ids"]
