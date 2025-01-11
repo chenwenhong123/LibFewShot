@@ -7,7 +7,6 @@ import os
 import torch
 from core.config import Config
 from core import Test
-from core.model.meta import MAMLUnicorn
 
 
 PATH = "./results/DN4-miniImageNet--ravi-Conv64F-5-1-Dec-01-2021-06-05-20"
@@ -21,11 +20,8 @@ VAR_DICT = {
 
 
 def main(rank, config):
-    if config["model"]["name"] == "MAMLUnicorn":
-        model = MAMLUnicorn(**config["model"]["kwargs"])
-    else:
-        model = Test(rank, config, PATH)
-    model.test_loop()
+    test = Test(rank, config, PATH)
+    test.test_loop()
 
 
 if __name__ == "__main__":

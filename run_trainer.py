@@ -7,15 +7,11 @@ import torch
 import os
 from core.config import Config
 from core import Trainer
-from core.model.meta import MAMLUnicorn
 
 
 def main(rank, config):
-    if config["model"]["name"] == "MAMLUnicorn":
-        model = MAMLUnicorn(**config["model"]["kwargs"])
-    else:
-        model = Trainer(rank, config)
-    model.train_loop(rank)
+    trainer = Trainer(rank, config)
+    trainer.train_loop(rank)
 
 
 if __name__ == "__main__":
